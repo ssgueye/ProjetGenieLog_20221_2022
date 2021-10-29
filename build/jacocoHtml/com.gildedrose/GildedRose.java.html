@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GildedRose.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">gilded-rose-kata</a> &gt; <a href="index.source.html" class="el_package">com.gildedrose</a> &gt; <span class="el_source">GildedRose.java</span></div><h1>GildedRose.java</h1><pre class="source lang-java linenums">package com.gildedrose;
+
+class GildedRose {
+    Item[] items;
+
+<span class="fc" id="L6">    public GildedRose(Item[] items) {</span>
+
+<span class="fc" id="L8">        this.items = items;</span>
+<span class="fc" id="L9">    }</span>
+
+    private void updateItem(Item item)
+    {
+<span class="fc bfc" id="L13" title="All 2 branches covered.">        if (!item.name.equals(&quot;Aged Brie&quot;)</span>
+<span class="fc bfc" id="L14" title="All 2 branches covered.">                &amp;&amp; !item.name.equals(&quot;Backstage passes to a TAFKAL80ETC concert&quot;)) {</span>
+<span class="fc bfc" id="L15" title="All 2 branches covered.">            if (item.quality &gt; 0) {</span>
+<span class="fc bfc" id="L16" title="All 2 branches covered.">                if (!item.name.equals(&quot;Sulfuras, Hand of Ragnaros&quot;)) {</span>
+<span class="fc" id="L17">                    item.quality = item.quality - 1;</span>
+                }
+            }
+        } else {
+<span class="fc bfc" id="L21" title="All 2 branches covered.">            if (item.quality &lt; 50) {</span>
+<span class="fc" id="L22">                item.quality = item.quality + 1;</span>
+
+<span class="fc bfc" id="L24" title="All 2 branches covered.">                if (item.name.equals(&quot;Backstage passes to a TAFKAL80ETC concert&quot;)) {</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">                    if (item.sellIn &lt; 11) {</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">                        if (item.quality &lt; 50) {</span>
+<span class="fc" id="L27">                            item.quality = item.quality + 1;</span>
+                        }
+                    }
+
+<span class="fc bfc" id="L31" title="All 2 branches covered.">                    if (item.sellIn &lt; 6) {</span>
+<span class="fc bfc" id="L32" title="All 2 branches covered.">                        if (item.quality &lt; 50) {</span>
+<span class="fc" id="L33">                            item.quality = item.quality + 1;</span>
+                        }
+                    }
+                }
+            }
+        }
+
+<span class="fc bfc" id="L40" title="All 2 branches covered.">        if (!item.name.equals(&quot;Sulfuras, Hand of Ragnaros&quot;)) {</span>
+<span class="fc" id="L41">            item.sellIn = item.sellIn - 1;</span>
+        }
+
+<span class="fc bfc" id="L44" title="All 2 branches covered.">        if (item.sellIn &lt; 0) {</span>
+<span class="fc bfc" id="L45" title="All 2 branches covered.">            if (!item.name.equals(&quot;Aged Brie&quot;)) {</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">                if (!item.name.equals(&quot;Backstage passes to a TAFKAL80ETC concert&quot;)) {</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">                    if (item.quality &gt; 0) {</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">                        if (!item.name.equals(&quot;Sulfuras, Hand of Ragnaros&quot;)) {</span>
+<span class="fc" id="L49">                            item.quality = item.quality - 1;</span>
+                        }
+                    }
+                } else {
+<span class="fc" id="L53">                    item.quality = 0;</span>
+                }
+            } else {
+<span class="fc bfc" id="L56" title="All 2 branches covered.">                if (item.quality &lt; 50) {</span>
+<span class="fc" id="L57">                    item.quality = item.quality + 1;</span>
+                }
+            }
+        }
+<span class="fc" id="L61">    }</span>
+
+
+    public void updateQuality()
+    {
+<span class="fc bfc" id="L66" title="All 2 branches covered.">        for (Item item : items) {</span>
+<span class="fc" id="L67">            updateItem(item);</span>
+        }
+<span class="fc" id="L69">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
