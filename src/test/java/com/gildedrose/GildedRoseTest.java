@@ -42,10 +42,11 @@ class GildedRoseTest {
   void testQualityForAgedBrie()
   {
 
-    Item[] items = new Item[] {new Item("Aged Brie", 2, 0) };
+    Item[] items = new Item[] {new Item("Aged Brie", 1, 0) };
     GildedRose app = new GildedRose(items);
     app.updateQuality();
     assertThat(app.items[0].quality, is(1));
+    assertThat(app.items[0].sellIn, is(0));
   }
 
   @Test
@@ -125,6 +126,16 @@ class GildedRoseTest {
   }
 
   @Test
+  @DisplayName("Test other product with their sellIn positive")
+  void testOtherProductWithSellInPositive()
+  {
+    Item[] items = new Item[] {new Item("Elixir of the Mongoose",1,6)};
+    GildedRose app = new GildedRose(items);
+    app.updateQuality();
+    assertThat(app.items[0].quality,is(5));
+  }
+
+  @Test
   @DisplayName("Test the Aged Brie With a negative SellIn")
   void testAgedBrieWithSellInNegative()
   {
@@ -136,7 +147,7 @@ class GildedRoseTest {
   }
 
   @Test
-  @DisplayName("Test the metho toString()")
+  @DisplayName("Test the method toString()")
   void TestToString() {
     Item[] items = new Item[] { new Item("foo", -1, 10) };
     assertThat(items[0].toString(), is("foo, -1, 10"));
