@@ -39,7 +39,7 @@ class GildedRose {
 
     private void updateItem(Item item)
     {
-        if (!item.name.equals("Aged Brie")
+        /*if (!item.name.equals("Aged Brie")
                 && !item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
             qualityDecreased(item);
         } else {
@@ -70,7 +70,9 @@ class GildedRose {
             } else {
                 qualityIncreased(item);
             }
-        }
+        }*/
+
+
     }
 
 
