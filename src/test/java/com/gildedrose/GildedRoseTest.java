@@ -58,7 +58,6 @@ class GildedRoseTest {
     assertThat(app.items[0].quality, is(80));
   }
 
-  //test quality superieur à 50 avec Sellin negatif
   @Test
   @DisplayName("Test the quality greater than 50 for Age Brie with a negative SellIn")
   void testQualityGreaterThan50WithSellInNegative()
@@ -78,7 +77,6 @@ class GildedRoseTest {
     GildedRose app = new GildedRose(items);
     app.updateQuality();
     assertThat(app.items[0].quality, is(50));
-
   }
 
   @Test

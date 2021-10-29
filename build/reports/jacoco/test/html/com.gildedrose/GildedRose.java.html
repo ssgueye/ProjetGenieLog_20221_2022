@@ -9,52 +9,52 @@ class GildedRose {
 <span class="fc" id="L9">    }</span>
 
     public void updateQuality() {
-<span class="fc bfc" id="L12" title="All 2 branches covered.">        for (int i = 0; i &lt; items.length; i++) {</span>
-<span class="fc bfc" id="L13" title="All 2 branches covered.">            if (!items[i].name.equals(&quot;Aged Brie&quot;)</span>
-<span class="fc bfc" id="L14" title="All 2 branches covered.">                    &amp;&amp; !items[i].name.equals(&quot;Backstage passes to a TAFKAL80ETC concert&quot;)) {</span>
-<span class="fc bfc" id="L15" title="All 2 branches covered.">                if (items[i].quality &gt; 0) {</span>
-<span class="fc bfc" id="L16" title="All 2 branches covered.">                    if (!items[i].name.equals(&quot;Sulfuras, Hand of Ragnaros&quot;)) {</span>
-<span class="fc" id="L17">                        items[i].quality = items[i].quality - 1;</span>
+<span class="fc bfc" id="L12" title="All 2 branches covered.">        for (Item item : items) {</span>
+<span class="fc bfc" id="L13" title="All 2 branches covered.">            if (!item.name.equals(&quot;Aged Brie&quot;)</span>
+<span class="fc bfc" id="L14" title="All 2 branches covered.">                    &amp;&amp; !item.name.equals(&quot;Backstage passes to a TAFKAL80ETC concert&quot;)) {</span>
+<span class="fc bfc" id="L15" title="All 2 branches covered.">                if (item.quality &gt; 0) {</span>
+<span class="fc bfc" id="L16" title="All 2 branches covered.">                    if (!item.name.equals(&quot;Sulfuras, Hand of Ragnaros&quot;)) {</span>
+<span class="fc" id="L17">                        item.quality = item.quality - 1;</span>
                     }
                 }
             } else {
-<span class="fc bfc" id="L21" title="All 2 branches covered.">                if (items[i].quality &lt; 50) {</span>
-<span class="fc" id="L22">                    items[i].quality = items[i].quality + 1;</span>
+<span class="fc bfc" id="L21" title="All 2 branches covered.">                if (item.quality &lt; 50) {</span>
+<span class="fc" id="L22">                    item.quality = item.quality + 1;</span>
 
-<span class="fc bfc" id="L24" title="All 2 branches covered.">                    if (items[i].name.equals(&quot;Backstage passes to a TAFKAL80ETC concert&quot;)) {</span>
-<span class="fc bfc" id="L25" title="All 2 branches covered.">                        if (items[i].sellIn &lt; 11) {</span>
-<span class="fc bfc" id="L26" title="All 2 branches covered.">                            if (items[i].quality &lt; 50) {</span>
-<span class="fc" id="L27">                                items[i].quality = items[i].quality + 1;</span>
+<span class="fc bfc" id="L24" title="All 2 branches covered.">                    if (item.name.equals(&quot;Backstage passes to a TAFKAL80ETC concert&quot;)) {</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">                        if (item.sellIn &lt; 11) {</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">                            if (item.quality &lt; 50) {</span>
+<span class="fc" id="L27">                                item.quality = item.quality + 1;</span>
                             }
                         }
 
-<span class="fc bfc" id="L31" title="All 2 branches covered.">                        if (items[i].sellIn &lt; 6) {</span>
-<span class="fc bfc" id="L32" title="All 2 branches covered.">                            if (items[i].quality &lt; 50) {</span>
-<span class="fc" id="L33">                                items[i].quality = items[i].quality + 1;</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">                        if (item.sellIn &lt; 6) {</span>
+<span class="fc bfc" id="L32" title="All 2 branches covered.">                            if (item.quality &lt; 50) {</span>
+<span class="fc" id="L33">                                item.quality = item.quality + 1;</span>
                             }
                         }
                     }
                 }
             }
 
-<span class="fc bfc" id="L40" title="All 2 branches covered.">            if (!items[i].name.equals(&quot;Sulfuras, Hand of Ragnaros&quot;)) {</span>
-<span class="fc" id="L41">                items[i].sellIn = items[i].sellIn - 1;</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">            if (!item.name.equals(&quot;Sulfuras, Hand of Ragnaros&quot;)) {</span>
+<span class="fc" id="L41">                item.sellIn = item.sellIn - 1;</span>
             }
 
-<span class="fc bfc" id="L44" title="All 2 branches covered.">            if (items[i].sellIn &lt; 0) {</span>
-<span class="fc bfc" id="L45" title="All 2 branches covered.">                if (!items[i].name.equals(&quot;Aged Brie&quot;)) {</span>
-<span class="fc bfc" id="L46" title="All 2 branches covered.">                    if (!items[i].name.equals(&quot;Backstage passes to a TAFKAL80ETC concert&quot;)) {</span>
-<span class="fc bfc" id="L47" title="All 2 branches covered.">                        if (items[i].quality &gt; 0) {</span>
-<span class="fc bfc" id="L48" title="All 2 branches covered.">                            if (!items[i].name.equals(&quot;Sulfuras, Hand of Ragnaros&quot;)) {</span>
-<span class="fc" id="L49">                                items[i].quality = items[i].quality - 1;</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">            if (item.sellIn &lt; 0) {</span>
+<span class="fc bfc" id="L45" title="All 2 branches covered.">                if (!item.name.equals(&quot;Aged Brie&quot;)) {</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">                    if (!item.name.equals(&quot;Backstage passes to a TAFKAL80ETC concert&quot;)) {</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">                        if (item.quality &gt; 0) {</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">                            if (!item.name.equals(&quot;Sulfuras, Hand of Ragnaros&quot;)) {</span>
+<span class="fc" id="L49">                                item.quality = item.quality - 1;</span>
                             }
                         }
                     } else {
-<span class="fc" id="L53">                        items[i].quality = items[i].quality - items[i].quality;</span>
+<span class="fc" id="L53">                        item.quality = 0;</span>
                     }
                 } else {
-<span class="fc bfc" id="L56" title="All 2 branches covered.">                    if (items[i].quality &lt; 50) {</span>
-<span class="fc" id="L57">                        items[i].quality = items[i].quality + 1;</span>
+<span class="fc bfc" id="L56" title="All 2 branches covered.">                    if (item.quality &lt; 50) {</span>
+<span class="fc" id="L57">                        item.quality = item.quality + 1;</span>
                     }
                 }
             }
