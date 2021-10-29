@@ -39,40 +39,53 @@ class GildedRose {
 
     private void updateItem(Item item)
     {
-        /*if (!item.name.equals("Aged Brie")
-                && !item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
-            qualityDecreased(item);
-        } else {
-            if (item.quality < 50) {
-                item.quality = item.quality + 1;
 
-                if (item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
-                    if (item.sellIn < 11) {
-                        qualityIncreased(item);
-                    }
+        if(item.name.equals("Aged Brie"))
+        {
+            qualityIncreased(item);
+            sellInDecreased(item);
 
-                    if (item.sellIn < 6) {
-                        qualityIncreased(item);
-                    }
-                }
+            if(item.sellIn < 0)
+            {
+                qualityIncreased(item);
             }
         }
 
-        sellInDecreased(item);
-
-        if (item.sellIn < 0) {
-            if (!item.name.equals("Aged Brie")) {
-                if (!item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
-                    qualityDecreased(item);
-                } else {
-                    qualityNull(item);
-                }
-            } else {
+        else if(item.name.equals("Backstage passes to a TAFKAL80ETC concert"))
+        {
+            qualityIncreased(item);
+            if(item.sellIn <= 10)
+            {
                 qualityIncreased(item);
             }
-        }*/
 
+            if(item.sellIn <= 5)
+            {
+                qualityIncreased(item);
+            }
 
+            sellInDecreased(item);
+            if(item.sellIn < 0)
+            {
+                qualityNull(item);
+            }
+
+        }
+
+        else if(item.name.equals("Sulfuras, Hand of Ragnaros"))
+        {
+            //Nothing to do
+        }
+
+        else
+        {
+            qualityDecreased(item);
+            sellInDecreased(item);
+            if(item.sellIn < 0)
+            {
+                qualityDecreased(item);
+            }
+        }
     }
 
 
