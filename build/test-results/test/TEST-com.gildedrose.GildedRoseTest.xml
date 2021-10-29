@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.gildedrose.GildedRoseTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2021-10-29T14:48:57" hostname="SALIOU" time="0.092">
+<testsuite name="com.gildedrose.GildedRoseTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2021-10-29T15:26:15" hostname="SALIOU" time="0.08">
   <properties/>
-  <testcase name="test for other product with SellIn negative" classname="com.gildedrose.GildedRoseTest" time="0.039"/>
-  <testcase name="Test the metho toString()" classname="com.gildedrose.GildedRoseTest" time="0.022"/>
+  <testcase name="test for other product with SellIn negative" classname="com.gildedrose.GildedRoseTest" time="0.032"/>
+  <testcase name="Test the metho toString()" classname="com.gildedrose.GildedRoseTest" time="0.019"/>
   <testcase name="Test the Aged Brie With a negative SellIn" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test that the quality for BackStage increased twice when the sellIn is lower than 11" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="test the quality for Aged Brie with quality lower than 50" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
@@ -12,7 +12,7 @@
   <testcase name="Test the quality is  unchanged for Sulfuras and it's 80" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test the quality greater than 50 for Age Brie with a negative SellIn" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="test That the quality is equal to zero" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test that the quality for backstage is 0 when the sellIn is negative" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test that the quality for backstage is 0 when the sellIn is negative" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="Test that the quality for BackStage increased three times when the sellIn is lower than 6" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
