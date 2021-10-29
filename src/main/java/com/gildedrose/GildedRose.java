@@ -8,6 +8,13 @@ class GildedRose {
         this.items = items;
     }
 
+    private void qualityIncreased(Item item)
+    {
+        if (item.quality < 50)
+        {
+            item.quality = item.quality + 1;
+        }
+    }
     private void updateItem(Item item)
     {
         if (!item.name.equals("Aged Brie")
@@ -23,15 +30,11 @@ class GildedRose {
 
                 if (item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
                     if (item.sellIn < 11) {
-                        if (item.quality < 50) {
-                            item.quality = item.quality + 1;
-                        }
+                        qualityIncreased(item);
                     }
 
                     if (item.sellIn < 6) {
-                        if (item.quality < 50) {
-                            item.quality = item.quality + 1;
-                        }
+                        qualityIncreased(item);
                     }
                 }
             }
@@ -53,9 +56,7 @@ class GildedRose {
                     item.quality = 0;
                 }
             } else {
-                if (item.quality < 50) {
-                    item.quality = item.quality + 1;
-                }
+                qualityIncreased(item);
             }
         }
     }
